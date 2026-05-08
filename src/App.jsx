@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const audio = new Audio("/./../click.mp3");
+  const audio = new Audio("/click.mp3");
   return (
     <>
        <div className="center">
