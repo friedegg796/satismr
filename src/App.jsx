@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.css'
+import click from './assets/click.wav'
 
 function App() {
   const [count, setCount] = useState(0)
-  const audio = new Audio("/click.mp3");
+  const [audio, setAudio] = useState(new Audio(click));
   return (
     <>
        <div className="center">
@@ -12,10 +13,11 @@ function App() {
           className="center"
           onClick={() => {
             setCount((count) => count + 1);
+            setAudio(new Audio(click));
             audio.play();
           }}
         >
-          Count is {count}
+          Satisfying Mouse Sound Number: {count}
         </button>
         </div>
 
