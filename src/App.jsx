@@ -4,17 +4,26 @@ import useSound from 'use-sound';
 import click from './assets/click.wav'
 
 function App() {
-  const [audio, setAudio] = useState(new Audio(click));
-  audio.loop = true;
+  const [Playing, setIsPlaying] = useState(false);
+  const [play,  { stop } ] = useSound(click, {
+    onplay: () => setIsPlaying(true),
+  loop: true, volume: 0.5});
+
+  const togglePlay = () => {
+    if (Playing) {
+      stop();
+    } else {
+      play();
+    }
+    setIsPlaying(!Playing);
+  }
   return (
     <>
         <button
           type="button"
           className="audbutton"
-          onClick={() => {
-            setAudio(new Audio(click));
-            audio.play();
-          }}
+
+      onClick={togglePlay}
         >
           <img src={click} alt="Click" />
         </button>
