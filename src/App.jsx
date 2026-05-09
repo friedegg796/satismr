@@ -1,25 +1,23 @@
 import { useState } from 'react'
 import './App.css'
+import useSound from 'use-sound';
 import click from './assets/click.wav'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [audio, setAudio] = useState(new Audio(click));
+  audio.loop = true;
   return (
     <>
-       <div className="center">
         <button
           type="button"
-          className="center"
+          className="audbutton"
           onClick={() => {
-            setCount((count) => count + 1);
             setAudio(new Audio(click));
             audio.play();
           }}
         >
-          Satisfying Mouse Sound Number: {count}
+          <img src={click} alt="Click" />
         </button>
-        </div>
 
 
     </>
