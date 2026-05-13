@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import useSound from 'use-sound';
-import click from '.././assets/sounds/click.wav'
-import clickimg from '.././assets/hero.png'
+import pinknoisesound from '.././assets/sounds/pinknoise.ogg'
+import pinknoiseimg from '.././assets/hero.png'
 
-function Mouseclick() {
+function PinkNoise() {
       const [Playing, setIsPlaying] = useState(false);
-  const [play,  { stop } ] = useSound(click, {
+  const [play,  { stop } ] = useSound(pinknoisesound, {
     onplay: () => setIsPlaying(true),
-  loop: true, volume: 0.5});
+  loop: true, volume: 0.25});
 
 
   const togglePlay = () => {
@@ -27,9 +27,9 @@ return (
 
       onClick={togglePlay}
         >
-          <img src={clickimg} alt="Click" />
+          <img src={pinknoiseimg} alt="Pink Noise" />
         </button>
 )
 }
 
-export default Mouseclick
+export default PinkNoise

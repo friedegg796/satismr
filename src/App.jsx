@@ -3,7 +3,8 @@ import './App.css'
 // import useSound from 'use-sound';
 import MouseClick from './buttons/MouseClick.jsx'
 import WhiteNoise from './buttons/WhiteNoise.jsx'
-import Mouseclickcopy from './buttons/Mouseclick copy 2.jsx'
+import PinkNoise from './buttons/PinkNoise.jsx'
+
 
 
 function App() {
@@ -13,14 +14,8 @@ function App() {
     <div className="audbuttons">
       <MouseClick />
       <WhiteNoise />
-      <Mouseclickcopy />
-      <Mouseclickcopy />
-      <Mouseclickcopy />
-      <Mouseclickcopy />
-      <Mouseclickcopy />
-      <Mouseclickcopy />
-      <Mouseclickcopy />
-      <Mouseclickcopy />
+      <PinkNoise />
+
         </div>
     </>
   )

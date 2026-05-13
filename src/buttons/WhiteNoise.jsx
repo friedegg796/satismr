@@ -7,7 +7,7 @@ function WhiteNoise() {
       const [Playing, setIsPlaying] = useState(false);
   const [play,  { stop } ] = useSound(whitenoisesound, {
     onplay: () => setIsPlaying(true),
-  loop: true, volume: 0.5});
+  loop: true, volume: 0.25});
 
 
   const togglePlay = () => {
