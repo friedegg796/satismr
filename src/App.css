@@ -1,20 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 25%, #90caf9 50%, #bbdefb 75%, #e3f2fd 100%); /* Calming ASMR-inspired gradient: soft blues transitioning to light purples */
+    background-attachment: fixed; /* Keeps gradient fixed during scroll */
+    font-family: Arial, sans-serif; /* Optional: ensures clean typography */
+    min-height: 100vh; /* Ensures full height coverage */
+}
+
 .audbuttons {
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  justify-content: center;
-  place-items: center;
-  gap: 18px;
-  max-width: 400px;
-  margin: 120px auto 0;
-
-
-
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Increased min size for better touch targets */
+    justify-content: center;
+    place-items: center;
+    gap: 20px; /* Slightly larger gap for breathing room */
+    max-width: 500px; /* Wider for more buttons */
+    margin: 120px auto 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Subtle gradient background */
+    border-radius: 15px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 .audbuttons img {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
+    width: 60px; /* Slightly larger for visibility */
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions */
+    border-radius: 50%; /* Circular buttons */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Initial shadow */
 }
 
+.audbuttons img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+    filter: brightness(1.1); /* Slight brightness increase */
+}
+
+.audbuttons img:active {
+    transform: scale(0.95); /* Press effect */
+}
+
+.audbuttons img.pressed {
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.6); /* Blue glow to indicate active state */
+    opacity: 0.8; /* Slight transparency */
+    animation: pulse 1.5s infinite; /* Optional pulsing for emphasis */
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .audbuttons {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Slightly smaller on very small screens */
+        gap: 10px;
+        margin: 60px auto 0;
+        padding: 10px;
+    }
+    .audbuttons img {
+        width: 60px;
+        height: 60px;
+    }
+}
