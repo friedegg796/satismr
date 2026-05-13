@@ -3,7 +3,7 @@ import useSound from 'use-sound';
 import whitenoisesound from '.././assets/sounds/whitenoise.ogg'
 import whitenoiseimg from '.././assets/hero.png'
 
-function Mouseclick() {
+function WhiteNoise() {
       const [Playing, setIsPlaying] = useState(false);
   const [play,  { stop } ] = useSound(whitenoisesound, {
     onplay: () => setIsPlaying(true),
@@ -32,4 +32,4 @@ return (
 )
 }
 
-export default Mouseclick
+export default WhiteNoise
