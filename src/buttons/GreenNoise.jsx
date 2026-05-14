@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import useSound from 'use-sound';
-import pinknoisesound from '.././assets/sounds/pinknoise.ogg'
-import pinknoiseimg from '.././assets/hero.png'
+import greennoisesound from '.././assets/sounds/greennoise.ogg'
+import greennoiseimg from '.././assets/hero.png'
 
-function PinkNoise() {
+function GreenNoise() {
       const [Playing, setIsPlaying] = useState(false);
-  const [play,  { stop } ] = useSound(pinknoisesound, {
+  const [play,  { stop } ] = useSound(greennoisesound, {
     onplay: () => setIsPlaying(true),
   loop: true, volume: 0.25});
 
@@ -27,9 +27,9 @@ return (
 
       onClick={togglePlay}
         >
-          <img src={pinknoiseimg} alt="Pink Noise" />
+          <img src={greennoiseimg} alt="Pink Noise" />
         </button>
 )
 }
 
-export default PinkNoise
+export default GreenNoise

@@ -4,6 +4,7 @@ import './App.css'
 import MouseClick from './buttons/MouseClick.jsx'
 import WhiteNoise from './buttons/WhiteNoise.jsx'
 import PinkNoise from './buttons/PinkNoise.jsx'
+import GreenNoise from './buttons/GreenNoise.jsx'
 
 
 
@@ -15,6 +16,7 @@ function App() {
       <MouseClick />
       <WhiteNoise />
       <PinkNoise />
+      <GreenNoise />
 
         </div>
     </>
