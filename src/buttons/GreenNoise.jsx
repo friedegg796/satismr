@@ -27,7 +27,7 @@ return (
 
       onClick={togglePlay}
         >
-          <img src={greennoiseimg} alt="Pink Noise" />
+          <img src={greennoiseimg} alt="Green Noise" />
         </button>
 )
 }
